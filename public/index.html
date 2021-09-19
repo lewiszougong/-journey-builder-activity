@@ -30,12 +30,23 @@
         <div class="slds-grid">
 
             <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
-              <h1>Welcome to your activity!</h1>
-
+              <label for="templateId">Select Template ID:</label><br>
+              <form>
+                <select id="templateId">
+                    <option value="1">ST04_CAROUSEL2</option>
+                    <option value="2" selected="selected">ST04_CAROUSEL1</option>
+                    <option value="3">ST04_CAROUSEL4</option>
+                </select>
+              </form>
+              <label for="parameter1">Parameter 1</label><br>
+              <input type="text" id="parameter1" name="parameter1" required minlength="4" maxlength="8" size="10"><br>
+              <label for="parameter2">Parameter 2</label><br>
+              <input type="text" id="parameter2" name="parameter2" required minlength="4" maxlength="8" size="10"><br>
+              <label for="parameter3">Parameter 3</label><br>
+              <input type="text" id="parameter3" name="parameter3" required minlength="4" maxlength="8" size="10"><br>
+              <label for="parameter10">Parameter 10</label><br>
+              <input type="text" id="parameter10" name="parameter10" required minlength="4" maxlength="8" size="10"><br>
             </main>
-           
-            
-
         </div>
 
     </div>

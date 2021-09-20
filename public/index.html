@@ -3,14 +3,32 @@
 
 <head>
     <title></title>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="vendor/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.css">
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet"
+          href="vendor/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="//code.jquery.com/git/jquery-git.min.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
     <script type="text/javascript">
+    <style>
+        .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        .textBoxSize{
+            width: 300px;
+        }
+    </style>
         (function () {
             var config = {
                 baseUrl: 'js'
@@ -22,34 +40,44 @@
 
             require(config, dependencies);
         })();
+
     </script>
 </head>
 
 <body>
-    <div id="step1" class="step">
-        <div class="slds-grid">
-
-            <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
-              <label for="templateId">Select Template ID:</label><br>
-              <form>
-                <select id="templateId">
-                    <option value="1">ST04_CAROUSEL2</option>
-                    <option value="2" selected="selected">ST04_CAROUSEL1</option>
-                    <option value="3">ST04_CAROUSEL4</option>
-                </select>
-              </form>
-              <label for="parameter1">Parameter 1</label><br>
-              <input type="text" id="parameter1" name="parameter1" required minlength="4" maxlength="8" size="10"><br>
-              <label for="parameter2">Parameter 2</label><br>
-              <input type="text" id="parameter2" name="parameter2" required minlength="4" maxlength="8" size="10"><br>
-              <label for="parameter3">Parameter 3</label><br>
-              <input type="text" id="parameter3" name="parameter3" required minlength="4" maxlength="8" size="10"><br>
-              <label for="parameter10">Parameter 10</label><br>
-              <input type="text" id="parameter10" name="parameter10" required minlength="4" maxlength="8" size="10"><br>
-            </main>
-        </div>
-
+<div id="step1" class="step">
+    <div class="slds-grid">
+        <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
+            <br><br><br><br><br><br><br><br>
+            &emsp;<label for="messageName">Message Name:</label><br>
+            &emsp;<input type="text" id="messageName" name="messageName" required minlength="4" maxlength="8" size="10"
+                         class="textBoxSize"><br><br>
+            &emsp;<label for="templateId">Select Template ID:</label>
+            <form>
+                &emsp;<select id="templateId">
+                <option value="1">ST04_CAROUSEL2</option>
+                <option value="2" selected="selected">ST04_CAROUSEL1</option>
+                <option value="3">ST04_CAROUSEL4</option>
+            </select>
+            </form>
+            <br>
+            &emsp;<label for="parameter1">Parameter 1</label><br>
+            &emsp;<input type="text" id="parameter1" name="parameter1" required minlength="4" maxlength="8"
+                         size="10"><br><br>
+            &emsp;<label for="parameter2">Parameter 2</label><br>
+            &emsp;<input type="text" id="parameter2" name="parameter2" required minlength="4" maxlength="8"
+                         size="10"><br><br>
+            &emsp;<label for="parameter3">Parameter 3</label><br>
+            &emsp;<input type="text" id="parameter3" name="parameter3" required minlength="4" maxlength="8"
+                         size="10"><br><br>
+            &emsp;<label for="parameter10">Parameter 10</label><br>
+            &emsp;<input type="text" id="parameter10" name="parameter10" required minlength="4" maxlength="8"
+                         size="10"><br><br>
+            &emsp;<input type="button" class="button" value="Submit">
+        </main>
     </div>
+
+</div>
 </body>
 
 </html>

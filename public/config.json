@@ -26,6 +26,7 @@
         }
     },
     "configurationArguments": {
+      "applicationExtensionKey": "4eb52802-4947-447e-8f8b-ed8ca5b615cd",
       "save": {
         "url": "https://salesforce-notification.herokuapp.com/journeybuilder/save",
           "verb": "POST",

@@ -28,6 +28,15 @@
         .textBoxSize{
             width: 300px;
         }
+        .floating-box {
+            float: left;
+            width: 900px;
+            height: 450px;
+            margin: 50px;
+            border: 1px groove #555552;
+            padding-left: 50px;
+            padding-top: 100px;
+        }
     </style>
         (function () {
             var config = {
@@ -46,8 +55,10 @@
 
 <body>
     <div>
-        <img src="images/scbLogo.png" alt="SCB" width="100" height="60">
+        <p style="text-align:center;"><img src="images/SCB-logo.png" alt="SCB" width="500" height="333"></p>
+    </div>
 
+    <div class="floating-box">
         <p class="inputLabel">Message Name:</p>
         <input id="messageName" placeholder="message name" type="text" required="required" disabled="disabled" minlength="1" />
         <p class="inputLabel">Select Template ID:</p>

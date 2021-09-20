@@ -1,66 +1,71 @@
 {
-    "workflowApiVersion": "1.1",
-    "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
-        "category": "message"
-    },
-    "type": "REST",
-    "lang": {
-        "en-US": {
-          "name": "Template",
-          "description": "A Template for a custom Journey Builder activity"
+  "name": "Push Message A",
+  "id": "162f2cac-9a5d-4661-b96d-be147d822a19",
+  "key": "REST-3",
+  "type": "REST",
+  "arguments": {
+    "executionMode": "{{Context.ExecutionMode}}",
+    "definitionId": "{{Context.DefinitionId}}",
+    "activityId": "{{Activity.Id}}",
+    "contactKey": "{{Context.ContactKey}}",
+    "execute": {
+      "inArguments": [
+        {
+          "action": "SEND_PUSH_RAW",
+          "analyticsLabel": "PushNoti_Exp_A",
+          "title": "My Car My Cash just for You",
+          "body": "Convert your car to cash and get approval in 1 day. Click here for more information!",
+          "ctaLink": "scbeasy://product-details/mockA",
+          "emailAddress": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.emailAddress}}",
+          "name": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.name}}",
+          "priority1": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.priority1}}",
+          "retargeting": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.retargeting}}",
+          "emailEligible": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.emailEligible}}",
+          "pushEligible": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.pushEligible}}",
+          "deviceToken": "{{Event.DEAudience-31a3a737-4b56-e5a1-da2a-3c02ad0523d4.deviceToken}}"
         }
+      ],
+      "outArguments": [],
+      "url": "https://kong-gw-1-0-0.ms.depthcon1.com/notification/v1/notification/journeybuilder/execute"
     },
-    "arguments": {
-        "execute": {
-           "inArguments":[],
-          "outArguments": [],
-          "url": "https://salesforce-notification.herokuapp.com/journeybuilder/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
-        }
+    "testExecute": "",
+    "startActivityKey": "{{Context.StartActivityKey}}",
+    "definitionInstanceId": "{{Context.DefinitionInstanceId}}",
+    "requestObjectId": "{{Context.RequestObjectId}}"
+  },
+  "configurationArguments": {
+    "save": "",
+    "testSave": "",
+    "publish": {
+      "url": "https://kong-gw-1-0-0.ms.depthcon1.com/notification/v1/notification/journeybuilder/publish"
     },
-    "configurationArguments": {
-      "applicationExtensionKey": "4eb52802-4947-447e-8f8b-ed8ca5b615cd",
-      "save": {
-        "url": "https://salesforce-notification.herokuapp.com/journeybuilder/save",
-          "verb": "POST",
-        "useJwt": true
-       },
-       "publish": {
-        "url": "https://salesforce-notification.herokuapp.com/journeybuilder/publish",
-           "verb": "POST",
-        "useJwt": true
-       },
-      "stop": {
-        "url": "https://salesforce-notification.herokuapp.com/journeybuilder/stop",
-           "verb": "POST",
-        "useJwt": true
-      },
-      "validate": {
-        "url": "https://salesforce-notification.herokuapp.com/journeybuilder/validate",
-        "verb": "POST",
-        "useJwt": true
+    "testPublish": "",
+    "unpublish": "",
+    "stop": "",
+    "testStop": "",
+    "testUnpublish": "",
+    "partnerActivityId": "",
+    "validate": "",
+    "testValidate": "",
+    "outArgumentSchema": "",
+    "executeSchema": ""
+  },
+  "metaData": {
+    "icon": "icon.png",
+    "category": "message",
+    "isConfigured": true,
+    "configurationDisabled": true
+  },
+  "editable": true,
+  "outcomes": [
+    {
+      "key": "3a78aaf2-86d8-4eb7-8551-8b8f710af889",
+      "next": "WAITBYDURATION-5",
+      "arguments": {},
+      "metaData": {
+        "invalid": false
       }
-    },
-    "userInterfaces": {
-        "configModal": {
-            "height": 400,
-            "width": 1000,
-          "fullscreen": false
-        }
-    },
-    "schema": {
-        "arguments": {
-            "execute": {
-                "inArguments": [],
-                "outArguments": []
-            }
-        }
     }
+  ],
+  "errors": null
 }
